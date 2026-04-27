@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gosukula Wedding</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 💌 WELCOME SCREEN -->
+<div id="inviteScreen" onclick="openInvite()">
+    <div class="welcome-box">
+        <h1>💖 Gosukula Wedding 💖</h1>
+        <h2>Kavya Weds Ranjith</h2>
+        <p>Tap to Open</p>
+    </div>
+</div>
+
+<!-- 🎆 FIREWORKS -->
+<canvas id="fireworks"></canvas>
+
+<!-- 💍 MAIN CONTENT -->
+<div class="container">
+
+    <div class="header">
+        <h1>💖 Wedding Invitation 💖</h1>
+        <h2>Kavya Weds Ranjith</h2>
+        <p>We invite you to celebrate our special day</p>
+    </div>
+
+    <!-- COUPLE -->
+    <div class="couple">
+        <div class="card">
+            <img src="assets/kavya.png">
+            <h3>Kavya</h3>
+        </div>
+
+        <div class="heart">❤️</div>
+
+        <div class="card">
+            <img src="assets/ranjith.png">
+            <h3>Ranjith</h3>
+        </div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <h2 id="countdown"></h2>
+
+    <!-- DETAILS -->
+    <div class="details">
+        <h2>Wedding Details</h2>
+        <p>Date: 1 May 2026</p>
+        <p>Time: 11:15 AM</p>
+        <p>Venue: BMR Gardens, Karimnagar</p>
+    </div>
+
+    <!-- MAP -->
+    <div class="map">
+        <h3>📍 Location</h3>
+        <iframe src="https://www.google.com/maps?q=BMR+Gardens+Karimnagar&output=embed"></iframe>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery">
+        <img src="assets/002A7199.jpg">
+        <img src="assets/002A7201.jpg">
+        <img src="assets/002A7205.jpg">
+    </div>
+
+    <!-- RSVP -->
+    <div class="rsvp">
+        <h2>💌 Send Wishes</h2>
+        <input id="name" placeholder="Your Name">
+        <textarea id="message" placeholder="Your Wishes"></textarea>
+        <button onclick="submitWish()">Send</button>
+        <div id="wishList"></div>
+    </div>
+
+    <!-- MUSIC -->
+    <button onclick="playMusic()" class="music-btn">🎵 Play Music</button>
+    <audio id="bgMusic" loop>
+        <source src="music.mp3">
+    </audio>
+
+    <div class="footer">
+        <p>With Love ❤️ Family & Friends</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

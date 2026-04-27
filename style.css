@@ -1,0 +1,179 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    /* MAIN BACKGROUND IMAGE */
+    background: 
+        radial-gradient(circle at center, rgba(255, 0, 100, 0.25), rgba(0,0,0,0.6)),
+        url("assets/bg.png") center/cover no-repeat fixed;
+
+    color: white;
+}
+
+/* 🔥 OVERLAY */
+body::before {
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    z-index:-1;
+}
+
+/* 💌 WELCOME SCREEN */
+#inviteScreen {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    cursor:pointer;
+}
+
+.welcome-box {
+    text-align:center;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(20px);
+    animation:fadeIn 1.5s ease;
+}
+
+.welcome-box h1 {
+    font-size:28px;
+    text-shadow:0 0 15px #ff4d6d;
+}
+
+.welcome-box p {
+    margin-top:10px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:scale(0.8);}
+    to {opacity:1;}
+}
+
+@keyframes pulse {
+    50% { transform:scale(1.1); }
+}
+
+/* 📦 MAIN */
+.container {
+    max-width:800px;
+    margin:auto;
+    padding:30px;
+    text-align:center;
+}
+
+/* HEADER */
+.header h1 {
+    font-size:34px;
+    text-shadow:0 0 15px #ff4d6d;
+}
+
+/* COUPLE */
+.couple {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:30px 0;
+}
+
+.card {
+    width:180px;
+    padding:15px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(20px);
+}
+
+.card img {
+    width:100%;
+    height:150px;
+    border-radius:15px;
+}
+
+.heart {
+    font-size:40px;
+    animation:pulse 1s infinite;
+}
+
+/* COUNTDOWN */
+#countdown {
+    margin:15px;
+    font-size:20px;
+}
+
+/* DETAILS */
+.details {
+    margin:20px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+}
+
+/* MAP */
+.map iframe {
+    width:100%;
+    height:200px;
+    border-radius:15px;
+}
+
+/* GALLERY */
+.gallery img {
+    width:110px;
+    margin:8px;
+    border-radius:12px;
+}
+
+/* RSVP */
+.rsvp {
+    margin-top:30px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+}
+
+.rsvp input,
+.rsvp textarea {
+    width:90%;
+    margin:10px auto;
+    padding:10px;
+    display:block;
+}
+
+/* FOOTER */
+.footer {
+    margin-top:20px;
+    opacity:0.7;
+}
+
+/* 🎆 FIREWORKS */
+#fireworks {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+/* 📱 MOBILE */
+@media(max-width:768px){
+    .couple {
+        flex-direction:column;
+    }
+
+    .card {
+        width:80%;
+    }
+}
